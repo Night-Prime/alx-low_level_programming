@@ -13,7 +13,8 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0, j = 0, exit;
 	char *ptr;
 
-here_i_go_again:j = 0;
+here_i_go_again:
+	j = 0;
 	exit = 0;
 	for (; (haystack[i] != '\0'); i++)
 		if (haystack[i] == needle[j])
@@ -23,7 +24,7 @@ here_i_go_again:j = 0;
 		}
 	if (haystack[i] == '\0')
 	{
-		return ('\0');
+		return (NULL);
 	}
 	while ((haystack[i] != '\0') && (needle[j] != '\0'))
 	{
@@ -44,4 +45,3 @@ here_i_go_again:j = 0;
 	goto here_i_go_again;
 	return (ptr);
 }
-
